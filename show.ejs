@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= book.name %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= book.title %>
+    </h1>
+    <ul>
+        <li>
+            <b>
+                <%= book.author %>
+            </b>
+        </li>
+        <li>
+            <%= book.category %>
+        </li>
+        <li>
+            $<%= book.price %>
+        </li>
+    </ul>
+    <a href="/books">All Books</a>
+    <a href="/books/<%=book._id%>/edit ">Edit</a>
+    <form action="/books/<%= book._id%>?_method=DELETE" method="POST">
+        <button>DELETE</button>
+    </form>
+</body>
+
+</html>

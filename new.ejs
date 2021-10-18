@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Book</title>
+</head>
+
+<body>
+    <h1>Add Book to Reading List</h1>
+    <form action="/books" method="POST">
+        <label for="title">Enter Title</label>
+        <input type="text" name="title" id="title" placeholder="Book Title">
+
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" placeholder="author name">
+
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" placeholder="price">
+
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="Fantasy">Fantasy</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Thriller">Thriller</option>
+            <option value="NonFiction">NonFiction</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+        </select>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

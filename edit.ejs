@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+
+<body>
+    <h1>Edit Book </h1>
+    <form action="/books/<%= book._id %>?_method=PUT" method="POST">
+        <label for="title">Enter Title</label>
+        <input type="text" name="title" id="title" placeholder="Book Title" value="<%= book.title %> ">
+
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" placeholder="author name" value="<%= book.author %> ">
+
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" placeholder="price" value="<%=book.price%>">
+
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="Fantasy" <%=book.category==='Fantasy' ? 'selected' :'' %> >Fantasy</option>
+            <option value="Fiction" <%=book.category==='Fiction' ? 'selected' :'' %> >Fiction</option>
+            <option value="Thriller" <%=book.category==='Thriller' ? 'selected' :'' %> >Thriller</option>
+            <option value="NonFiction" <%=book.category==='NonFiction' ? 'selected' :'' %> >NonFiction</option>
+            <option value="Sci-Fi" <%=book.category==='Sci-Fi' ? 'selected' :'' %> >Sci-Fi</option>
+        </select>
+        <button>Submit</button>
+        <a href="/books/<%=book._id%>">Cancel</a>
+    </form>
+</body>
+
+</html>
